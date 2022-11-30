@@ -1,0 +1,112 @@
+#header {
+    width: 100%;
+    height: 100%;
+    background-image: url(./images/fon.jpg);
+    margin:0;
+}
+.shapka{
+    margin-top: 20px;
+    border: 4px solid rgb(20, 20,255);
+    position: relative;
+    border-radius: 15px;
+    top:0;
+    margin-left: 10%;
+    width: 80%;
+    height: 150px;
+    background-color: rgb(0, 255, 255);
+}
+.telo{
+    margin-top: 20px;
+    border: 4px solid rgb(20, 20,255);
+    position: relative;
+    border-radius: 15px;
+    top:0;
+    margin-left: 10%;
+    width: 80%;
+    height: 800px;
+    background-color: rgb(0, 255, 255);
+}   
+.f{
+    margin-left: 10px;
+
+}
+.posrit{
+    position: absolute;
+    top:10px;
+    right: 20px;
+}
+.img2 {
+    height: 70px;
+    width: 70px;
+}
+
+.hh {
+    color: rgb(20, 20, 255);
+    font: 40px Georgia;
+    text-align: center;
+}
+
+.ds {
+    width: 300px;
+    color: #ffee00;
+    font-style: italic;
+    margin: 70px 0 0 30px;
+    font-size: 22px;
+}
+
+.cubeposit {
+    position: absolute;
+    top: 0px;
+    left: 20px;
+}
+.osebe{
+    
+    left: 50%;
+    background-color: rgb(20, 220, 255);
+    width: 100px;
+    height: 100px;
+    border: 4px solid rgb(20, 20,255);
+    border-radius: 40%;
+}
+
+
+.hasy {
+    background-color: rgb(150, 255, 255);
+    width: 100px;
+    height: 100px;
+    border: 4px solid rgb(20, 20,255);
+    border-radius: 40%;
+}
+
+.minutes {
+    position: absolute;
+    width: 3px;
+    height: 35px;
+    left: 51px;
+    top: 16px;
+    background: rgb(20, 20, 255);
+    animation: now 1600s infinite steps(1600);
+    transform-origin: 0 34px;
+}
+
+.has {
+    position: absolute;
+    width: 4px;
+    height: 28px;
+    left: 50px;
+    top: 20px;
+    background: rgb(20, 20, 255);
+    animation: nov 43200s infinite steps(43200);
+    transform-origin: 0 29px;
+}
+
+.podval{
+    margin-left: 10%;
+    margin-top: 2%;
+    position: relative;
+    bottom: 0;
+    left: 0;
+    width: 80%;
+    height: 100px;
+    background-color: rgb(122, 122, 122);
+}

@@ -1,0 +1,352 @@
+/*Часы*/
+.sekundes {
+    position: absolute;
+    width: 2px;
+    height: 45px;
+    left: 51px;
+    top: 4px;
+    background: rgb(20, 20, 255);
+    animation: nev 60s infinite steps(60);
+    transform-origin: 0 45px;
+}
+
+@keyframes nev {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes nov {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes now {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.onen,
+.threen,
+.sixn,
+.ninen {
+    position: absolute;
+    font-weight: bold;
+    font-size: 18px;
+    color: rgb(20, 20, 255);
+}
+
+.onen {
+    top: 3px;
+    left: 41px;
+}
+
+.threen {
+    top: 43px;
+    left: 85px;
+}
+
+.sixn {
+    top: 78px;
+    left: 43px;
+}
+
+.ninen {
+    top: 43px;
+    left: 5px;
+}
+
+.sentr {
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    top: 42px;
+    left: 44px;
+    background: rgb(20, 20, 255);
+}
+
+/*Вращающийся куб*/
+.cube {
+    position: relative;
+    margin: 10px;
+    width: 70px;
+    height: 70px;
+    -webkit-transform-style: preserve-3d;
+    -ms-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+}
+
+.face {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 70px;
+    height: 70px;
+    padding: 5px 3px;
+    color: #1F0405;
+    font-size: 16px;
+    text-align: center;
+    line-height: 70px;
+    border-radius: 4px;
+    box-shadow: inset 0 0 0 2px #705E5F;
+}
+
+.front {
+    -webkit-transform: translateZ(38px);
+    -ms-transform: translateZ(38px);
+    transform: translateZ(38px);
+    background-image: url(./images/fon.jpg)
+}
+
+.back {
+    -webkit-transform: translateZ(-38px) rotateY(-180deg);
+    -ms-transform: translateZ(-38px) rotateY(-180deg);
+    transform: translateZ(-38px) rotateY(-180deg);
+    background-image: url(./images/fon.jpg)
+}
+
+.left {
+    -webkit-transform: translateX(-38px) rotateY(-90deg);
+    -ms-transform: translateX(-38px) rotateY(-90deg);
+    transform: translateX(-38px) rotateY(-90deg);
+    background-image: url(./images/fon.jpg)
+}
+
+.rght {
+    -webkit-transform: translateX(38px) rotateY(90deg);
+    -ms-transform: translateX(38px) rotateY(90deg);
+    transform: translateX(38px) rotateY(90deg);
+    background-image: url(./images/fon.jpg)
+}
+
+.rotate-y {
+    -webkit-animation: spinY 10s infinite linear;
+    -ms-animation: spinY 10s infinite linear;
+    animation: spinY 10s infinite linear;
+}
+
+@-webkit-keyframes spinY {
+    from {
+        -webkit-transform: rotateY(0);
+        -ms-transform: rotateY(0);
+        transform: rotateY(0);
+    }
+
+    to {
+        -webkit-transform: rotateY(360deg);
+        -ms-transform: rotateY(360deg);
+        transform: rotateY(360deg);
+    }
+}
+
+@keyframes spinY {
+    from {
+        -webkit-transform: rotateY(0);
+        -ms-transform: rotateY(0);
+        transform: rotateY(0);
+    }
+
+    to {
+        -webkit-transform: rotateY(360deg);
+        -ms-transform: rotateY(360deg);
+        transform: rotateY(360deg);
+    }
+}
+
+/*Многоуровневое меню*/
+.nav {
+    margin-top: 2%;
+    color: rgb(20, 20, 255);
+    font: 40px Georgia;
+    text-align: center;
+}
+
+.nav a {
+    text-decoration: none;
+    display: block;
+    transition: .5s linear;
+}
+
+.nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.topmenu>li {
+    display: block;
+    position: relative;
+    width: 200px;
+}
+
+.topmenu>li>a {
+    font-weight: bold;
+    padding: 10px 30px;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #1c1c1c;
+    border: 1px solid #999;
+}
+
+.submenu {
+    position: absolute;
+    left: 50%;
+    z-index: 5;
+    width: 240px;
+    visibility: hidden;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: .5s ease-in-out;
+}
+
+.submenu li {
+    border-radius: 5px;
+    position: relative;
+    border: 4px solid rgb(20, 20, 255);
+    margin: 2px;
+}
+
+.submenu a {
+    background-color: rgb(0, 255, 255);
+    color: #1c1c1c;
+    text-align: center;
+    font-size: 14px;
+    letter-spacing: 1px;
+    padding: 10px 20px;
+}
+
+.submenu .submenu {
+    position: absolute;
+    top: 0;
+    left: 200px;
+}
+
+.nav li:hover>.submenu {
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0px);
+}
+
+
+/* раскрывающиеся блоки */
+.reference {
+    display: none;
+}
+
+.reference~.story {
+    display: none;
+}
+
+.reference+label {
+    font-size: 16px;
+    padding: 0;
+    color: blue;
+    cursor: pointer;
+    display: inline-block;
+}
+
+.reference:checked~.story {
+    display: block;
+    background: rgb(0, 255, 255);
+    border: 4px solid rgb(20, 20, 255);
+    width: 10%;
+    margin-left: 10px;
+    border-radius: 15px;
+}
+
+/* Слайдер */
+#slaid {
+    /* Задаём относительное позиционирование */
+    position: relative;
+    /*Размер и рамка блока*/
+    width: 100px;
+    height: 100px;
+    border: 2px solid #333;
+    border-radius: 5px;
+}
+
+/* Групповой селектор для 7-ми картинок */
+.image1,
+.image2,
+.image3,
+.image4 {
+    position: absolute;
+    opacity: 0;
+    width: 100px;
+    height: 100px;
+}
+.image1 {
+    animation: one-image 8s 0s ease alternate;
+}
+.image2 {
+    animation: two-image 8s 3s ease alternate;
+}
+
+.image3 {
+    animation: three-image 8s 6s ease alternate;
+}
+
+.image4 {
+    animation: four-image 8s 9s ease alternate;
+}
+
+@keyframes one-image {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+@keyframes two-image {
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes three-image {
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes four-image {
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 1;
+    }
+
+}
